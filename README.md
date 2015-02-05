@@ -29,6 +29,16 @@ This module is basically a wrapper for the [Piwik HTTP Tracking API](http://deve
 is running on the vagrant machine at port 8888.
 `token_auth` is the admin token, i.e. not the users individual token. The default view for a new user is no site access.
 
+#### Config
+Create a config file `config.js` with the following structure, including your Piwik adming token, and the corresponding Piwik domain
+
+```javascript
+var config = {};
+config.token_auth = "";
+config.domain = "";
+config.rec = 1;
+module.exports = config;
+```
 
 #### Track a request
 
