@@ -10,10 +10,10 @@ Each user will then have their own web-frontend login to view this information.
 All the functionality you see when you use Piwik is provided by Piwik Plugins. The core of Piwik (termed Piwik Core) only contains tools for those plugins. We have extended
 the functionality of Piwik to suit our needs through the development of several plugins
 
-*  OpeniAppTracker
-*  OpeniCompanyTracker
-*  OpeniLocationTracker
-*  OpeniObjectTracker
+*  [OpeniAppTracker](https://github.com/OPENi-ict/openi-app-tracker)
+*  [OpeniCompanyTracker](https://github.com/OPENi-ict/openi-company-tracker)
+*  [OpeniLocationTracker](https://github.com/OPENi-ict/openi-location-tracker)
+*  [OpeniObjectTracker](https://github.com/OPENi-ict/openi-object-tracker)
 
 
 
@@ -22,36 +22,62 @@ the functionality of Piwik to suit our needs through the development of several 
 This tracking feature is currently under development and is subject to change. When you `vagrant up` the dev-env piwik will be running at `192.168.33.10:8888/piwik`
 
 
-### Tracking Parameters
-
 
 ### Usage
 
-This module is basically a wrapper for the [Piwik HTTP Tracking API](http://developer.piwik.org/api-reference/tracking-api) so you could experiment with it using straightforward
-HTTP requests. Below are a few examples, assuming Piwik is running on the vagrant machine at port 8000.
+This module is basically a wrapper for the [Piwik HTTP Tracking API](http://developer.piwik.org/api-reference/tracking-api). Below are a few examples, assuming Piwik
+is running on the vagrant machine at port 8888.
 `token_auth` is the admin token, i.e. not the users individual token. The default view for a new user is no site access.
 
-*   App Tracking
 
-         http://192.168.33.10:8888/piwik.php?idsite=1&rec=1&uid=OtherTest&urlref=http://psa
+#### Track a request
 
-*   Company Tracking
+```javascript
+tracklet.track({
+   app: 'chrome',
+   company: 'google',
+   object: 'someObjectID'
+});
+```
 
-         http://192.168.33.10:8888/piwik.php?idsite=1&rec=1&uid=Betapond
+#### Create a user
 
-*   Object Tracking
+```javascript
+tracklet.createUser({
+   name: 'philip',
+   password: 'password',
+   email: 'philip@openi.com'
+});
+```
 
-         http://192.168.33.10:8888/piwik.php?idsite=1&rec=1&uid=TSSG&c_n=age_object
+#### Delete a user
 
-*   Create a User
+```javascript
+tracklet.deleteUser({
+   name: 'philip',
+   email: 'philip@openi.com'
+});
+```
 
-         http://192.168.33.10:8888/?module=API&method=UsersManager.addUser&format=JSON&userLogin=John&password=password&email=john@openi.com&token_auth=1234
+#### Create a site
 
-*   Create a Site
+```javascript
+tracklet.createSite({
+   siteName: 'philip@openi.com',
+   urls: 'philipsCloudletId'
+});
+```
 
-         http://192.168.33.10:8888/?module=API&method=SitesManager.addSite&format=JSON&token_auth=1234&siteName=john@openi.com&urls=johnsCloudletID
+#### Set user access
+Set access to one of 3 levels; access, noaccess, admin
 
-*   Give Access to a Site
+```javascript
+tracklet.setAccess({
+   userLogin: 'philip',
+   access: 'view',
+   idSites: 1
+});
+```
 
-         http://192.168.33.10:8888/?module=API&method=UsersManager.setUserAccess&format=JSON&token_auth=1234&userLogin=John&access=view&idSites=1
+
 
