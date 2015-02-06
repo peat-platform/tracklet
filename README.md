@@ -22,14 +22,6 @@ the functionality of Piwik to suit our needs through the development of several 
 This tracking feature is currently under development and is subject to change. When you `vagrant up` the dev-env piwik will be running at `192.168.33.10:8888/piwik`, but needs
 to be configured. There is a tutorial to follow.
 
-
-
-### Usage
-
-This module is basically a wrapper for the [Piwik HTTP Tracking API](http://developer.piwik.org/api-reference/tracking-api). Below are a few examples, assuming Piwik
-is running on the vagrant machine at port 8888.
-`token_auth` is the admin token, i.e. not the users individual token. The default view for a new user is no site access.
-
 #### Config
 Create a config file `config.js` with the following structure, including your Piwik adming token, and the corresponding Piwik domain
 
@@ -40,6 +32,12 @@ config.domain = "";
 config.rec = 1;
 module.exports = config;
 ```
+
+### Usage
+
+This module is basically a wrapper for the [Piwik HTTP Tracking API](http://developer.piwik.org/api-reference/tracking-api).
+`token_auth` is the admin token, i.e. not the users individual token. The default view for a new user is no site access.
+
 
 #### Create a new user, and site, and set the access correctly
 
