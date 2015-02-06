@@ -15,7 +15,7 @@ config.js
 Icon?
 ehthumbs.db
 Thumbs.db
-
+test.js
 # Runtime data #
 ################
 pids

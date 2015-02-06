@@ -19,7 +19,8 @@ the functionality of Piwik to suit our needs through the development of several 
 
 ### Dev Environment Usage
 
-This tracking feature is currently under development and is subject to change. When you `vagrant up` the dev-env piwik will be running at `192.168.33.10:8888/piwik`
+This tracking feature is currently under development and is subject to change. When you `vagrant up` the dev-env piwik will be running at `192.168.33.10:8888/piwik`, but needs
+to be configured. There is a tutorial to follow.
 
 
 
