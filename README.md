@@ -40,6 +40,18 @@ config.rec = 1;
 module.exports = config;
 ```
 
+#### Create a new user, and site, and set the access correctly
+
+```javascript
+tracklet.init({
+   name: 'philip',
+   password: 'password',
+   email: 'philip@openi.com',
+   urls: 'philipsCloudletId',
+   access: 'view'
+});
+```
+
 #### Track a request
 
 ```javascript
