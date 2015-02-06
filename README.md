@@ -79,7 +79,7 @@ tracklet.createSite({
 ```
 
 #### Set user access
-Set access to one of 3 levels; access, noaccess, admin
+Set access to one of 3 levels; view, noaccess, admin
 
 ```javascript
 tracklet.setAccess({
