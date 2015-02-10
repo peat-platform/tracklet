@@ -61,44 +61,16 @@ tracklet.track({
 });
 ```
 
-#### Create a user
+
+#### Delete a user & corresponding site
 
 ```javascript
-tracklet.createUser({
+tracklet.delete({
    name: 'philip',
-   password: 'password',
-   email: 'philip@openi.com'
+   site: 'philipsCloudletId'
 });
 ```
 
-#### Delete a user
-
-```javascript
-tracklet.deleteUser({
-   name: 'philip',
-   email: 'philip@openi.com'
-});
-```
-
-#### Create a site
-
-```javascript
-tracklet.createSite({
-   siteName: 'philip@openi.com',
-   urls: 'philipsCloudletId'
-});
-```
-
-#### Set user access
-Set access to one of 3 levels; view, noaccess, admin
-
-```javascript
-tracklet.setAccess({
-   userLogin: 'philip',
-   access: 'view',
-   idSites: 1
-});
-```
 
 
 
