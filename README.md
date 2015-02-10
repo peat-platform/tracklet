@@ -55,6 +55,7 @@ tracklet.init({
 
 ```javascript
 tracklet.track({
+   cloudlet: 'someUsersCloudletID'
    app: 'chrome',
    company: 'google',
    object: 'someObjectID'
