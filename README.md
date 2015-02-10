@@ -65,7 +65,7 @@ tracklet.track({
 #### Delete a user & corresponding site
 
 ```javascript
-tracklet.delete({
+tracklet.remove({
    name: 'philip',
    site: 'philipsCloudletId'
 });
