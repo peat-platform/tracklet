@@ -46,7 +46,7 @@ tracklet.init({
    name: 'philip',
    password: 'password',
    email: 'philip@openi.com',
-   urls: 'philipsCloudletId',
+   cloudlet: 'philipsCloudletId',
    access: 'view'
 });
 ```
@@ -68,7 +68,7 @@ tracklet.track({
 ```javascript
 tracklet.remove({
    name: 'philip',
-   site: 'philipsCloudletId'
+   cloudlet: 'philipsCloudletId'
 });
 ```
 
