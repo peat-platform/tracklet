@@ -25,7 +25,7 @@ to be configured. There is a tutorial to follow.
 #### Config
 Create a config file `config.js` with the following structure, including your Piwik adming token, and the corresponding Piwik domain
 
-```javascript
+```json
 var config = {};
 config.token_auth = "";
 config.domain = "";
