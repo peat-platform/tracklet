@@ -75,3 +75,17 @@ tracklet.remove({
 
 
 
+### Init
+Creating a site on Piwik requires the following parameters to be passed in the request
+`siteName` maps to `email`
+`urls` maps to `cloudlet`
+
+Creating a user on Piwik requires the following parameters to be passed in the request
+`userLogin` maps to `name`
+`password` maps to `password`
+`email` maps to `email`
+
+Setting user access for a site requires the following parameters to be passed in the request
+`userLogin` maps to `name`
+`access` maps to `access`
+`idSites` maps to `idSite`
