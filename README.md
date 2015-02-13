@@ -43,7 +43,6 @@ This module is basically a wrapper for the [Piwik HTTP Tracking API](http://deve
 
 ```javascript
 tracklet.init({
-   name: 'philip',
    password: 'password',
    email: 'philip@openi.com',
    cloudlet: 'philipsCloudletId',
@@ -67,7 +66,7 @@ tracklet.track({
 
 ```javascript
 tracklet.remove({
-   name: 'philip',
+   email: 'philip@openi.com',
    cloudlet: 'philipsCloudletId'
 });
 ```
@@ -81,11 +80,11 @@ Creating a site on Piwik requires the following parameters to be passed in the r
 `urls` maps to `cloudlet`
 
 Creating a user on Piwik requires the following parameters to be passed in the request
-`userLogin` maps to `name`
+`userLogin` maps to `email`
 `password` maps to `password`
 `email` maps to `email`
 
 Setting user access for a site requires the following parameters to be passed in the request
-`userLogin` maps to `name`
+`userLogin` maps to `email`
 `access` maps to `access`
 `idSites` maps to `idSite`
