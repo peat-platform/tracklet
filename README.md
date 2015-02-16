@@ -70,3 +70,9 @@ tracklet.remove({
    cloudlet: 'philipsCloudletId'
 });
 ```
+
+### Example of Running Instance
+
+Below is what the dashboard will look like for users
+
+![](https://github.com/OPENi-ict/openi-dev-env/blob/master/docs/images/Piwik%20OPENi%20Dashboard.png)
