@@ -20,7 +20,7 @@ the functionality of Piwik to suit our needs through the development of several 
 ### Dev Environment Usage
 
 This tracking feature is currently under development and is subject to change. When you `vagrant up` the dev-env piwik will be running at `192.168.33.10:8888/piwik`, but needs
-to be configured. There is a tutorial to follow.
+to be configured. There is a [tutorial here](https://github.com/OPENi-ict/openi-dev-env/wiki/Piwik-Setup).
 
 #### Config
 Create a config file `config.js` with the following structure, including your Piwik adming token, and the corresponding Piwik domain
