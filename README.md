@@ -28,7 +28,7 @@ Create a config file `config.js` with the following structure, including your Pi
 ```json
 var config = {};
 config.token_auth = "";
-config.domain = "";
+config.domain = "http://192.168.33.10:8888/piwik/";
 config.rec = 1;
 module.exports = config;
 ```
@@ -70,21 +70,3 @@ tracklet.remove({
    cloudlet: 'philipsCloudletId'
 });
 ```
-
-
-
-
-### Init
-Creating a site on Piwik requires the following parameters to be passed in the request
-`siteName` maps to `email`
-`urls` maps to `cloudlet`
-
-Creating a user on Piwik requires the following parameters to be passed in the request
-`userLogin` maps to `email`
-`password` maps to `password`
-`email` maps to `email`
-
-Setting user access for a site requires the following parameters to be passed in the request
-`userLogin` maps to `email`
-`access` maps to `access`
-`idSites` maps to `idSite`
