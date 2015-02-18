@@ -23,7 +23,7 @@ This tracking feature is currently under development and is subject to change. W
 to be configured. There is a [tutorial here](https://github.com/OPENi-ict/openi-dev-env/wiki/Piwik-Setup).
 
 #### Config
-Create a config file `config.js` with the following structure, including your Piwik adming token, and the corresponding Piwik domain
+Create a config file `config.js` with the following structure, including your Piwik auth token, and the corresponding Piwik domain
 
 ```json
 var config = {};
