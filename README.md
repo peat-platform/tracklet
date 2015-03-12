@@ -27,10 +27,28 @@ Create a config file `config.js` with the following structure, including your Pi
 
 ```json
 var config = {};
-config.token_auth = "";
-config.domain = "http://192.168.33.10:8888/piwik/";
-config.rec = 1;
+config.piwik = {};
+config.mysql = {};
+
+config.piwik.token_auth = "";
+config.piwik.domain = "http://127.0.0.1:8000/";
+
+config.mysql.host = 'localhost';
+config.mysql.user = 'piwik';
+config.mysql.password = 'password';
+config.mysql.database = 'piwik';
+config.mysql.multipleStatements = 'true';
+
+
 module.exports = config;
+```
+
+Then require both the tracklet package and the config file
+
+```javascript
+var tracklet = require('tracklet');
+var config = require('./config');
+tracklet.config(config);
 ```
 
 ### Usage
