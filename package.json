@@ -1,6 +1,6 @@
 {
   "name": "tracklet",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "keeping track of who is accessing cloudlet data",
   "main": "lib/main.js",
   "scripts": {
